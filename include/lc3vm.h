@@ -140,6 +140,10 @@ void ld_img(char* fname);
 
 // task 1 PSR priority/privilege function declarations here
 
+bool is_user_mode(void);
+void user_mode(void);
+void supervisor_mode(void);
+
 // task 2 stack manipulation function declarations here
 
 // task 3 MCR clock latch manipulation

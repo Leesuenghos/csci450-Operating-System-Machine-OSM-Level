@@ -18,6 +18,7 @@
         "ostream": "cpp",
         "stdlib.h": "c",
         "*.tcc": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "stdint.h": "c"
     }
 }

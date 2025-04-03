@@ -756,6 +756,21 @@ void ld_img(char* fname)
  * to indicate that we are now running in the more privileged supervisor mode.
  */
 
+bool is_user_mode(void)
+{
+  return (reg[PSR] >> 15) & 0x1;
+}
+
+void user_mode(void)
+{
+  reg[PSR] |= (1 << 15); // Set bit 15 to 1
+}
+
+void supervisor_mode(void)
+{
+  reg[PSR] &= ~(1 << 15); // Clear bit 15 to 0
+}
+
 /** @brief get priority
  *
  * Get and return the current priority set in the PSR.  The priority
