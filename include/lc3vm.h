@@ -157,6 +157,10 @@ void enable_clock(void);
 void disable_clock(void);
 bool is_running(void);
 
+// task 4 trap and rti
+void trap(uint16_t i);
+void rti(uint16_t i);
+
 // task 7 exceptions
 
 #ifdef TEST
