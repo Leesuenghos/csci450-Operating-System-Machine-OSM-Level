@@ -840,11 +840,21 @@ void pop(void)
  * to 1.
  */
 
+void enable_clock(void)
+{
+  reg[MCR] |= (1 << 15);
+}
+
 /** @brief disable clock run bit
  *
  * Disable the machine clock by setting the MCR run latch bit
  * [15] to 0.
  */
+
+void disable_clock(void)
+{
+  reg[MCR] &= ~(1 << 15);
+}
 
 /** @brief test is clock running
  *
@@ -855,6 +865,10 @@ void pop(void)
  * @returns bool True if the clock is currently enabled and thus the
  *   system is currently running, false if not.
  */
+bool is_running(void)
+{
+  return (reg[MCR] >> 15) & 0x1;
+}
 
 /** @brief exception
  *
