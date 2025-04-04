@@ -467,6 +467,7 @@ void jsr(uint16_t i)
  * @param i The instruction.  The bits of the instruction we are
  *   executing.
  */
+
 void trap(uint16_t i)
 {
   uint16_t temp_psr = reg[PSR];
@@ -522,7 +523,6 @@ void res(uint16_t i) {}
  *   executing.  The low 7 bits i[7:0] contain the trap service vector
  *   index to be invoked.
  */
-void trap(uint16_t i) {}
 
 /**
  * LC-3 instruction microcode store / lookup table.  Need to define array
