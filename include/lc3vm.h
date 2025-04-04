@@ -143,6 +143,8 @@ void ld_img(char* fname);
 bool is_user_mode(void);
 void user_mode(void);
 void supervisor_mode(void);
+uint16_t priority(void);
+void set_priority(uint16_t);
 
 // task 2 stack manipulation function declarations here
 
