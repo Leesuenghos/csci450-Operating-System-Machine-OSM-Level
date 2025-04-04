@@ -148,6 +148,9 @@ void set_priority(uint16_t);
 
 // task 2 stack manipulation function declarations here
 
+void push(uint16_t value);
+void pop(void);
+
 // task 3 MCR clock latch manipulation
 
 // task 7 exceptions
