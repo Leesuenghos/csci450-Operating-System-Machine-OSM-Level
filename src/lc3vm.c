@@ -683,7 +683,7 @@ void start(uint16_t offset)
 
   // perform the fetch-decode-execute cycle while the
   // run clock/latch is enabled
-  while (true) // needs to be modified to use is_running() once implemented
+  while (is_running()) // needs to be modified to use is_running() once implemented
   {
     // fetch the next instruction from memory
     uint16_t i = mem_read(reg[RPC]);
